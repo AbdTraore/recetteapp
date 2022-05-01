@@ -1,0 +1,31 @@
+runtime: php
+env: flex
+
+runtime_config:
+  document_root: public
+
+# Ensure we skip ".env", which is only for local development
+skip_files:
+- .env
+
+env_variables:
+  # Put production environment variables here.
+  APP_DEBUG: true
+  APP_LOG: errorlog
+  APP_KEY: base64:fJ2cCoKX08+ASO7grDodAovKY+8nqryjHNzGiE1zix8=
+  STORAGE_DIR: /tmp
+  CACHE_DRIVER: database
+  SESSION_DRIVER: database
+  ## Set these environment variables according to your CloudSQL configuration.
+  DB_CONNECTION: mysql
+  DB_HOST: "/cloudsql/recetteapp-347914:us-central1:recettedb"
+  DB_PORT: 5432
+  DB_DATABASE: recettedb
+  DB_USERNAME: root
+  DB_PASSWORD: Traa100399
+
+
+beta_settings:
+  # for Cloud SQL, set this value to the Cloud SQL connection name,
+  # e.g. "project:region:cloudsql-instance"
+  cloud_sql_instances: "recetteapp-347914:us-central1:recettedb"
