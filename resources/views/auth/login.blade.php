@@ -44,6 +44,8 @@
                     </a>
                 @endif
 
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>

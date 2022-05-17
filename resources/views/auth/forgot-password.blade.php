@@ -31,6 +31,7 @@
                     {{ __('Email Password Reset Link') }}
                 </x-button>
             </div>
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
         </form>
     </x-auth-card>
 </x-guest-layout>

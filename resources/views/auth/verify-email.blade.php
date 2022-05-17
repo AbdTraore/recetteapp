@@ -33,6 +33,7 @@
                 <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
                     {{ __('Log Out') }}
                 </button>
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
             </form>
         </div>
     </x-auth-card>
