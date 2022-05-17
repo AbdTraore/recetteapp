@@ -18,7 +18,7 @@
 
         <div class="mt-4 flex items-center justify-between">
             <form method="POST" action="{{ route('verification.send') }}">
-                @csrf
+                {{ csrf_token() }}
 
                 <div>
                     <x-button>

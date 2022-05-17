@@ -60,6 +60,7 @@
         </a>
         <div class="navbar-search-block">
           <form class="form-inline">
+            {{csrf_token()}}
             <div class="input-group input-group-sm">
               <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
               <div class="input-group-append">
@@ -77,7 +78,7 @@
       <li>
           <!-- Authentication -->
             <form method="POST" action="{{ route('logout') }}">
-              @csrf      
+              {{csrf_token()}}   
                 <a  class="dropdown-item" href="{{route('logout')}}"
                       onclick="event.preventDefault();
                           this.closest('form').submit();">
