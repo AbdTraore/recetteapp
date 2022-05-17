@@ -12,6 +12,7 @@ class VerifyCsrfToken extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        "/",
+        "http://t4drecetteapp.herokuapp.com/login",
+        "http://t4drecetteapp.herokuapp.com/register",
     ];
 }
